@@ -15,12 +15,12 @@ namespace BootStrampCheckMate
             LoadImages();
         }
         protected void Button1_Click(object sender, EventArgs e)
-        {  
-            if (FileUpload1.HasFile) 
+        {
+            if (FileUpload1.HasFile)
             {
                 string fileName = FileUpload1.FileName;
                 FileUpload1.PostedFile.SaveAs(Server.MapPath("~/Model/") + fileName);
-            }
+            }                    
             Response.Redirect("~/Default.aspx");
         }
 

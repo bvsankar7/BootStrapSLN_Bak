@@ -1,0 +1,121 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="BootStrampCheckMate.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        #Footer {
+            background-color: black;
+            position: relative;
+            height: 50px;
+            width: 100%;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #wrapper {
+            width: 100%;
+            margin: 0px auto;
+            background-color: #FFFFFF;
+        }
+
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar navbar-fixed-top" style="height: 80px; background-color:#61b008;">
+        <div class="container" style="width:100%;padding-top:5px;">
+            <div class="navbar-header">
+                <span><a class="navbar-brand" href="Default.aspx"><span>
+                    <img alt="Logo" src="Images/images.png" height="30" /></span>CheckMate</a></span>
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar navbar-collapse collapse" id="menu"">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="Category.aspx">Category</a>
+                        
+                    </li>
+                    <li><a href="SubCategory.aspx">SubCategory</a></li>
+                    <li><a href="ItemCreation.aspx">PlaceItems</a></li>
+                    <li><a href="#">Four</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" />
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+                 <ul class="nav navbar-nav navbar-right" style="margin-right: 10px;">
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <asp:Image ID="Image1" class="img-circle" runat="server" ImageUrl="~/Images/bike4.jpg" Width="30" Height="30" />
+                    <asp:Label ID="lbluser" runat="server" Text="Hi!. Siva"></asp:Label>
+                    <span class="caret" aria-hidden="true"></span></a>
+                <ul class="dropdown-menu" style="height: 200px; width: 350px;">
+                    <li>
+                        <div>
+                            <table>
+                                <tr>
+                                    <td style="padding-left:10px;">
+                                        <asp:Image ID="Image2" class="img-circle" runat="server" ImageUrl="~/Images/bike4.jpg" Width="100" Height="100" />
+                                        
+                                    </td>
+                                    <td style="padding-left:10px;">
+                                        <asp:Label ID="Label1" Font-Size="Large" Font-Bold="true" runat="server" Text="Siva Sankar Reddy"></asp:Label><br />
+                                        
+                                        <h5>Sankarboreddy@gmail.com</h5>
+                                        <h2>Privacy</h2>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li class="divider" role="separator"></li>
+                    <li style="text-align: right">
+                        <%--<input type="submit" value="SignOut" onserverclick="btn_signout_click" style="border-style: none; background-color: white;" />--%>
+                        <input id="Button1" type="button" value="LogOut" runat="server" onserverclick="btnlogout_Click" style="border-style: none; background-color: white;" />
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">Subscribe</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+   
+    <form id="form1" runat="server" style="padding-top: 81px;">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+    <!--Footer -->
+    <br />
+    <br />
+    <div id="Footer">
+        <footer class="footer-pos">
+            <div class="container">
+                <p class="pull-right"><a href="#">Back To Top</a></p>
+                <p><b>&copy; 2017 CheckMate.Com &middot;</b> <a href="#">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a></p>
+
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

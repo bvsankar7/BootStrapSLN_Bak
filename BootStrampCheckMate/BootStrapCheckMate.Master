@@ -1,0 +1,142 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BootStrapCheckMate.master.cs" Inherits="BootStrampCheckMate.BootStrapCheckMate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Bootstrap 101 Template</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .navbar-custom {
+            color: #FFFFFF;
+            background-color: #03a9f4;
+        }
+
+        #Footer {
+            background-color: black;
+            position: relative;
+            height: 50px;
+            width: 100%;
+            bottom: 0px;
+            right: 0px;
+        }
+
+        #wrapper {
+            width: 100%;
+            margin: 0px auto;
+            background-color: #FFFFFF;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="container-fluid">
+            <header class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="collapse navbar-collapse">
+                        <form class="navbar-form pull-right">
+                            <div class="input-group">
+                                <input type="search" title="Enter search" class="form-control" placeholder="Enter search" />
+                                <div class="input-group-addon"><span class=" glyphicon glyphicon-search" style="width: 50px"></span></div>
+
+                            </div>
+                        </form>
+
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+
+                            </button>
+                            <a class="navbar-brand" href="Default.aspx"><span>
+                                <img alt="Logo" src="Images/images.png" height="30" /></span>CheckMate</a>
+                        </div>
+
+
+                        <ul class="nav navbar-nav navbar-right navbar-collapse" id="menu">
+                            <li><a href="Default.aspx">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">General</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b> </a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Men</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Shirts</a></li>
+                                    <li><a href="#">Pantaloons</a></li>
+                                    <li><a href="#">Denims</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Women</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Saries</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Guallary</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <asp:Image ID="Image1" class="img-circle" runat="server" ImageUrl="~/Images/bike4.jpg" Width="30" Height="30" />&nbsp
+                            <span>
+                                <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="btnlogout_Click">LogOut</asp:LinkButton>--%>
+                                <%--<asp:Button ID="btnlogout" runat="server" Text="SignOut" OnClick="btnlogout_Click" BorderStyle="None" />--%>
+                                <asp:Label ID="lbluser" runat="server" Text="Hi!. Siva"></asp:Label>
+                            </span>&nbsp<span class="caret" aria-hidden="true"></span> </a>
+
+
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">
+                                        <asp:Image ID="Image2" class="img-circle" runat="server" ImageUrl="~/Images/bike4.jpg" Width="30" Height="30" />&nbsp&nbsp&nbsp<span>
+                                            <%--<input id="Button1" type="button" value="LogOut" runat="server" <%--onserverclick="btnlogout_Click"--%> />--%>
+                                        </span></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="OrderCreation.aspx">Shirts</a></li>
+                                    <li><a href="#">Pantaloons</a></li>
+                                    <li><a href="#">Denims</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Women</li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Saries</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Guallary</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <form id="form1" runat="server" style="margin-top: 42px; width: 100%; padding-top:20px;" >
+                <div class="container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+            <!--Footer -->
+            <br />
+            <br />
+            <div id="Footer">
+                <footer class="footer-pos">
+                    <div class="container">
+                        <p class="pull-right"><a href="#">Back To Top</a></p>
+                        <p><b>&copy; 2017 CheckMate.Com &middot;</b> <a href="#">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a></p>
+
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

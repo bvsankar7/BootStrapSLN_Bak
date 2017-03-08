@@ -86,6 +86,10 @@ namespace BootStrampCheckMate
         protected void ResetPasswd_Click(object sender, EventArgs e)
         {
             Response.Redirect("~/Registration/ResetPassword.aspx");
+            //Welcome To the Reset page
+
+
+
         }
     }
 }
